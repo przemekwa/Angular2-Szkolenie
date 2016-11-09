@@ -6,7 +6,8 @@
 
 # dependencies
 /node_modules
-/bower_components
+musicApp/node_modules
+musicApp/bower_components
 
 # IDEs and editors
 /.idea
