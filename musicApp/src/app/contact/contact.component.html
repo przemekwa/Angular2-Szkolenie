@@ -1,0 +1,27 @@
+<div class="columns">
+  <form  class="column is-6 is-offset-3" #contactForm="ngForm">
+    <label for="name" class="label">Name: </label>
+    <div class="control">
+      <input [class.is-danger]="nameRef.invalid" id="name" [(ngModel)]="name"  #nameRef="ngModel" required minlength="3" name="email" type="text" class="input">
+      {{ nameRef.errors | json }}
+      <div *ngIf="nameRef.dirty">
+        <span class="help is-danger"  *ngIf="nameRef.errors?.required"  >This field is required</span>
+        <span class="help is-danger" *ngIf="nameRef.errors?.minlength">You need to fill at last 3 letters</span>
+      </div>
+    </div>
+
+    <label for="email" class="label">Email: </label>
+    <div class="control">
+      <input id="email" [(ngModel)]="email"  #emailRef="ngModel" name="email" type="text" class="input">
+    </div>
+
+    <label for="message" class="label">Message:</label>
+    <div class="control">
+      <input id="message" [(ngModel)]="message" #messageRef="ngModel" name="message" type="text" class="input">
+    </div>
+
+    <div class="control">
+      <button  class="button is-primary" [disabled]="contactForm.invalid" >Send</button>
+    </div>
+  </form>
+</div>

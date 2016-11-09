@@ -1,0 +1,9 @@
+ 
+ 
+ <img [src]="imgUrl" alt="Brak obrazka" />
+ <ng-content></ng-content>
+ <h3 class="subtitle {{size}}">
+ <a [routerLink]="album.id">
+      {{album.name | truncate: (size=='sm') ? 20 :40}}
+ </a>
+</h3>

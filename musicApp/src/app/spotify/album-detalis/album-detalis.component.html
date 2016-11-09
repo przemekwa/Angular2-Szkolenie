@@ -1,0 +1,29 @@
+<div class="columns" *ngIf="albumDetails">
+  <div class="column is-3">
+     <ma-spotify-poster [album]="albumDetails" [size]="'lg'"></ma-spotify-poster>
+  </div>
+</div>
+
+<div class="column">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Track Name</td>
+        <td>Duration</td>
+      </tr>
+      
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let track of albumDetails?.tracks.items">
+          <td>{{track.name}}</td>
+          <td>{{track.duration_ms}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+

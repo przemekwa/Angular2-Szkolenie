@@ -1,0 +1,41 @@
+<div class="columns">
+  <div class="column is-3">
+    <h1 class="subtitle">Bookmarks</h1>
+    <div class="columns is-multiline">
+<div class="column is-6" *ngFor="let album of bookmarks$ | async">
+    
+   
+
+    <ma-spotify-poster [album]="album" [size]="'sm'"></ma-spotify-poster>
+     <button class="button" (click)="removeBookmarks(album)" >Remove</button>
+      </div>
+  </div>
+
+  </div>
+
+  <div class="column">
+    <h1 class="title">Albums finder</h1>
+    <div class="control has-addons">
+      <form>
+      <input name="inputName" type="text" class="input" [(ngModel)]="query" #queryRef="ngModel">
+      <button class="button" (click)="search()" [class.is-loading] = "isLoading" >Search</button>
+      </form> 
+    </div>
+ 
+<div class="columns is-multiline" infinite-scroll (scrolled)="scroll()">
+  <div class="column is-4" *ngFor="let album of albums">
+    
+   
+
+    <ma-spotify-poster [album]="album" [size]="'lg'">
+    <button [disabled]="isBookmarks(album)" type="button" class="button is-small" (click)="addBookmark(album)">Save</button> 
+
+    </ma-spotify-poster>
+    
+  </div>
+</div>
+
+  </div>
+</div>
+
+

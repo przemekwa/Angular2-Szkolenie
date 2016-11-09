@@ -1,0 +1,11 @@
+<div class="panel">
+
+<p class="panel-heading completed">
+ Todosy {{todosCompleted }} / {{todos.length}}
+</p>
+
+<ma-todo-form (itemCreated)="CreateItem($event)"></ma-todo-form>  
+
+<ma-todo-item *ngFor="let todo of todos" [item]="todo" (toggleCompleted)="ToggleTodoCompleted($event, todo)" (deletedId)="DeletedItem($event)" ></ma-todo-item>
+
+</div>

@@ -1,0 +1,14 @@
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a  class="nav-item is-tab" *ngFor="let item of menuItem" routerLinkActive="is-active" [routerLink]="item.route"  [routerLinkActiveOptions] = "{exact: item.exact}">
+    {{item.label}}
+    </a>
+   
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+
+
