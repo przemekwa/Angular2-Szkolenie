@@ -1,3 +1,4 @@
+import { MsToHumanPipe } from './../ms-to-human.pipe';
 import { SpotifyService } from './../spotify.service';
 import { IAlbumDetails } from './album-detalis-model';
 import { Component, OnInit } from '@angular/core';
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'ma-album-detalis',
   templateUrl: './album-detalis.component.html',
-  styleUrls: ['./album-detalis.component.scss']
+  styleUrls: ['./album-detalis.component.scss'],
 })
 export class AlbumDetalisComponent implements OnInit {
 id: string = "";

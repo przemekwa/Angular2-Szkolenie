@@ -32,5 +32,9 @@ describe('Pipe: MsToHuman', () => {
     expect(result).toBe("_");
   });
 
+  it('Test[38002 jak string-38sec]', () => {
+    let result = pipe.transform('38002');
+    expect(result).toBe("38sec");
+  });
 
 });

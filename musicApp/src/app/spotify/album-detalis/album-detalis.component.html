@@ -18,7 +18,8 @@
     <tbody>
       <tr *ngFor="let track of albumDetails?.tracks.items">
           <td>{{track.name}}</td>
-          <td>{{track.duration_ms}}</td>
+          <td>{{track.duration_ms | msToHuman }}</td>
+          <!--Dodanie msToHuman. Nazwa pochodzi od tego co jest zdefiniownae w nazwie-->
 
       </tr>
 
