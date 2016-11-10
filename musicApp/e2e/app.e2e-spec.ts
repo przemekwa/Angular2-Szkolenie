@@ -10,26 +10,24 @@ describe('music-app App', function() {
     contact = new ContactPage();
   });
 
-  it('should display message saying app works', () => {
+  it('Testowanie czy aplikacja Todo działa ', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Todo');
   });
 
-  it('Testowanie getInputName srony contact', () => {
+  it('Testowanie strony contact - pobieranie nazwy Input-a', () => {
     contact.navigateTo();
     expect(contact.getInputName().getText()).toEqual('Name:');
   });
 
-  it('Testowanie getLabelName srony contact', () => {
+  it(' Testowanie  strony contact - pobieranie nazwy Label-a', () => {
     contact.navigateTo();
     expect(contact.getLabelName().getText()).toEqual('Name:');
   });
 
-  it('Testowanie jeśli 2 znaki w formularzu', () => {
+  it(' Testowanie strony contact - jeśli 2 znaki w formularzu', () => {
     contact.navigateTo();
     contact.getInputName().sendKeys('ff');
     expect(contact.getErrorMsg().isDisplayed()).toBe(true);
   });
-
-
 });
