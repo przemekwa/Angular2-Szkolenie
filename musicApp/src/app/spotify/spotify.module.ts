@@ -10,6 +10,7 @@ import { BookmarksModule } from '../bookmarks/bookmarks.module';
 import { TruncatePipe } from './truncate.pipe';
 import { AlbumDetalisComponent } from './album-detalis/album-detalis.component';
 import { RouterModule } from '@angular/router';
+import { MsToHumanPipe } from './ms-to-human.pipe';
 
 
 @NgModule({
@@ -24,6 +25,6 @@ import { RouterModule } from '@angular/router';
    providers: [
     SpotifyService
   ],
-  declarations: [SpotifyComponent, SpotifyPosterComponent, TruncatePipe, AlbumDetalisComponent]
+  declarations: [SpotifyComponent, SpotifyPosterComponent, TruncatePipe, AlbumDetalisComponent, MsToHumanPipe]
 })
 export class SpotifyModule { }

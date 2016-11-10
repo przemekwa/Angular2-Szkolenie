@@ -47,12 +47,12 @@
       "style": false,
       "template": false
     },
-    "spec": {
-      "class": false,
+    "spec": { 
+            "class": false,
       "component": false,
       "directive": false,
       "module": false,
-      "pipe": false,
+      "pipe": true,  
       "service": false
     }
   }
