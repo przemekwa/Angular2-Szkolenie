@@ -17,12 +17,12 @@ describe('music-app App', function() {
 
   it('Testowanie getInputName srony contact', () => {
     contact.navigateTo();
-    expect(contact.getInputName().getText()).toEqual('Name');
+    expect(contact.getInputName().getText()).toEqual('Name:');
   });
 
   it('Testowanie getLabelName srony contact', () => {
     contact.navigateTo();
-    expect(contact.getLabelName().getText()).toEqual('Label');
+    expect(contact.getLabelName().getText()).toEqual('Name:');
   });
 
   it('Testowanie jeśli 2 znaki w formularzu', () => {
