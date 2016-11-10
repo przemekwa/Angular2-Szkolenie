@@ -1,10 +1,17 @@
-import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges,transition, OnChanges,animate, trigger, style, state } from '@angular/core';
 import { IItem } from '../spotify.model';
 
 @Component({
   selector: 'ma-spotify-poster',
   templateUrl: './spotify-poster.component.html',
-  styleUrls: ['./spotify-poster.component.scss']
+  styleUrls: ['./spotify-poster.component.scss'],
+   animations: [ 
+        trigger('album', [
+            // state('new', style({transition: 'all 1s'})),
+            // state('done', style({color: 'orange'})),
+            transition('void =>*', [style({transform: 'translateY(-100%)'}), animate('2s')]),
+            transition('* =>void', [style({transform: 'translateX(-1000px)'}), animate('2s')])
+        ])]
 })
 export class SpotifyPosterComponent implements OnInit, OnChanges {
 

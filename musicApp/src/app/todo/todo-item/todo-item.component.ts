@@ -8,7 +8,7 @@ import { ITodo } from '../todo-model';
         trigger('completeStatus', [
             state('new', style({color: 'green'})),
             state('done', style({color: 'orange'})),
-          transition('new<=>done', animate('2s'))
+            transition('new<=>done', animate('2s'))
         ])
 
     ]

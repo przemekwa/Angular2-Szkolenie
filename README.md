@@ -32,6 +32,45 @@ Animacje:
 - void => *   :enter
 
 
+Przykład 1:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1">dsad</div>
+
+</body>
+</html>
+
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  margin: 50px;
+  transition: all 1s;
+}
+
+.box:hover {
+  transform: translate(10px,100px)
+}
+
+albo
+
+.box:hover {
+  transform: scale(30)
+    
+}
+
+
+
+
 
 
  
