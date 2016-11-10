@@ -3,17 +3,22 @@
     {
       "id": 3505,
       "text": "Kupić kwiaty",
-      "completed": false
+      "completed": true
     },
     {
       "id": 13216,
       "text": "dsd",
-      "completed": false
+      "completed": true
     },
     {
       "id": 82710,
       "text": "dgdgd",
-      "completed": false
+      "completed": true
+    },
+    {
+      "id": 55951,
+      "text": "sad",
+      "completed": true
     }
   ]
 }

@@ -1,9 +1,17 @@
-import { Component, Input , Output, EventEmitter} from '@angular/core';
+import { Component, Input , Output, EventEmitter,transition, animate, trigger, style, state} from '@angular/core';
 import { ITodo } from '../todo-model';
 
 @Component({
     selector: 'ma-todo-item',
-    templateUrl: './todo-item.component.html'
+    templateUrl: './todo-item.component.html',
+    animations: [ 
+        trigger('completeStatus', [
+            state('new', style({color: 'green'})),
+            state('done', style({color: 'orange'})),
+          transition('new<=>done', animate('2s'))
+        ])
+
+    ]
 })
 
 export class TodoItemComponent {

@@ -1,4 +1,4 @@
-<div class="panel-block" (click)="toggleComplete()" [class.completed]="item.completed" > 
+<div class="panel-block" (click)="toggleComplete()" [class.completed]="item.completed" [@completeStatus]="item.completed ? 'done' : 'new'" > 
     {{item.text}}
    <span *ngIf="item.completed">(done)</span>
     <a class="button is-small" (click)="onDelete($event, item.id)">X</a>   
