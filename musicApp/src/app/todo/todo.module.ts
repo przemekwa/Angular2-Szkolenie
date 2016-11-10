@@ -10,21 +10,21 @@ import { TodoService } from './todo.service';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
-  imports: [
+  imports: [  //lista innych modulów, które exportują nasze dodatkowe rzeczy
     FormsModule,
     CommonModule,
     HttpModule
   ],
-  providers: [
+  providers: [ // lista usług dostęnych w podule 
     TodoService
   ]
    , 
-  declarations: [
+  declarations: [ // //lista komponentow, derektyw, pipes, które modul udostępnia w wew. 
     TodoFormComponent,
     TodoItemComponent,
     TodoComponent
     ],
-    exports: [
+    exports: [ //lista komponentow, derektyw, pipes, które modul udostępnia na zew.
       TodoComponent
     ]
 })

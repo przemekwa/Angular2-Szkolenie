@@ -2,7 +2,9 @@
   <div class="column is-3">
     <h1 class="subtitle">Bookmarks</h1>
     <div class="columns is-multiline">
-<div class="column is-6" *ngFor="let album of bookmarks$ | async">
+      <!--przekanie  doo derektywny for strumienia. Następuje automatyczna subkrybcja i dzięki pipe async jako wejscie przym-->
+      <!--promise lub observable  i przechowuje subskrybcje żeby poźniej zwrócić wartość.-->
+<div class="column is-6" *ngFor="let album of bookmarks$ | async"> 
     
    
 

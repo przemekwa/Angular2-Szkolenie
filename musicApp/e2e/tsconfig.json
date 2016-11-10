@@ -4,11 +4,11 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "module": "commonjs", //jaki typy modułów?
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc-e2e",
-    "sourceMap": true,
-    "target": "es5",
+    "sourceMap": true, // czy generować sourcemap
+    "target": "es5", //docelowa platforma
     "typeRoots": [
       "../node_modules/@types"
     ]

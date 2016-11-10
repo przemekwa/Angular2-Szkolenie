@@ -26,7 +26,7 @@ export class SpotifyComponent implements OnInit, AfterViewInit {
    this.queryRef.valueChanges.subscribe(c=>console.log(c));
  }
  
-  bookmarks$: EventEmitter<IItem[]>;
+  bookmarks$: EventEmitter<IItem[]>; // konwenja nazywanie strumieni.
 
 
   private oldQuery = '';
@@ -39,7 +39,11 @@ export class SpotifyComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
 
-    this.bookmarks$ = <EventEmitter<IItem[]>>this.bookmarksService.changed;
+    //Zamiast zapisywac się na rządanie normalnie przez subscribe to można do szablony przekazć cały strumień
+    //i odczytać w szablonie jako strumień używać pipow asynch
+    
+    this.bookmarks$ = <EventEmitter<IItem[]>>this.bookmarksService.changed; 
+    //
 
     //  this.bookmarksService.changed.subscribe(g=>{
     //   this.bookmarkAlbums = g;
