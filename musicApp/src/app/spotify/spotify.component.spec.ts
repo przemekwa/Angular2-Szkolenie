@@ -5,7 +5,8 @@ import { DebugElement } from '@angular/core';
 
 import { SpotifyComponent } from './spotify.component';
 
-describe('SpotifyComponent', () => {
+//Wylanczamy testy przez "x"
+xdescribe('SpotifyComponent', () => {
   let component: SpotifyComponent;
   let fixture: ComponentFixture<SpotifyComponent>;
 

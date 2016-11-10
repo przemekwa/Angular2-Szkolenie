@@ -5,7 +5,8 @@ import { DebugElement } from '@angular/core';
 
 import { TodoComponent } from './todo.component';
 
-describe('TodoComponent', () => {
+//Wylanczamy testy przez "x"
+xdescribe('TodoComponent', () => {
   let component: TodoComponent;
   let fixture: ComponentFixture<TodoComponent>;
 

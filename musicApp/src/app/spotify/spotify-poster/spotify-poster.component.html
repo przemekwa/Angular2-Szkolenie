@@ -1,7 +1,9 @@
  
  
  <img [src]="imgUrl" alt="Brak obrazka" />
- <ng-content></ng-content>
+ <!--To daje możliwośc przkazania całeoho html, który znajduje się w tagu od komponentu-->
+ <ng-content></ng-content> 
+
  <h3 class="subtitle {{size}}">
  <a [routerLink]="album.id">
       {{album.name | truncate: (size=='sm') ? 20 :40}}
