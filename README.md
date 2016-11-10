@@ -4,35 +4,56 @@ Angular2-Szkolenie
 
 
 
-Narzędzia do testowania:
+
 
 Dzien 4:
 
-Testy:
+##Testy:
 
-1. http://galenframework.com/ -- można używać jako testy, które dobrze się czyta.
+1. http://galenframework.com/ - można używać jako testy, które dobrze się czyta.
 2. Karma do testowania na silniku przegladarki (https://jasmine.github.io/)
    
-   Jeśli "f" to tylko ten test, jeślii "x" to wyłanaczamy test.
+   Jeśli "f" to tylko ten test, jeślii "x" to wyłączamy test.
 
-   Komenda do uruchomienia -> ng test
+   Komenda NPM do uruchomienia testów -> ng test
 
-3. Protractor - testowanie interfejsuj. Nakładka na Selenium
-  aby odpalic to -> ng e2e
+3. http://www.protractortest.org/#/ - testowanie interfejsu. Testy E2E. To nakładka na Selenium
 
-Animacje:
+   Komenda NPM do uruchomienia testów E2E -> ng e2e
 
-- To przejscie od jednego statu do drugiego.
-- Stany zapisujemy do trigger-aby [@userModel]="user.mode"
-- meta dane w komponencie animations: [trigger('userMode')] - tworzymy stany i style.
-- nastepnie dajemy przepis w formie transition z jednego do drugiego. transition('confirm => inny_stan, animate(różnie przejsćia))
-- kierunek przekstałcen => <=> + wildcard * każdy stan na inny_stan
-- stan void (gdy element nie istieje lub przestał instnieć)
-- * => void :leave
-- void => *   :enter
+##Animacje:
+
+- To przejscie od jednego statu do drugiego (głownie dla elementów posiadających stany pośrednie).
+- Stany zapisujemy do trigger-a w komponencie.
+- Meta dane w komponencie: animations: [trigger('userMode')] - tworzymy stany i style.
+- nastepnie dajemy przepis w formie transition z jednego stanu do drugiego stanu np. transition('confirm => inny_stan, animate(różnie przejsćia))
+- kierunek przekształcania "=>" "<=>" + wildcard "*" każdy stan na inny stan. Przykłady w kodzie SpotifyPosterComponent
+- stan void (gdy element nie istieje lub przestał instnieć. Czy jest lub go nie ma.)
+- "* => void" -> ":leave" - dodatkowe aliasy.
+- "void => *" -> ":enter" - dodatkowe aliasy.
+
+##Budowanie aplikacji
 
 
-Przykład 1:
+Komenda NPM do uruchomienia budowania -> ng build
+
+Komenda NPM do uruchomienia budowania -> ng build --prod
+
+Aplikacja będzie w katalogu disc. 
+Plik *.html + wszystkie js-y + plik gz.
+
+##Dodatkowe narzędzia
+
+https://sentry.io/welcome/ - logowanie automatyczne błedów w konsole od użytkownikow na produkcji. Płatne.
+https://ng-bootstrap.github.io/#/home
+http://plnkr.co/edit/?p=catalogue - szybki online edytor do aplikacji Angular 2 i nie tylko
+https://material.angularjs.org/latest/ - dokumentacja do Angulara 2.
+https://jsbin.com/ - szybkie online edytor do JS, Angulara itd.
+http://fontawesome.io/ - ikonki jako czcionka. Super skalowanie. Duża baza.
+http://bulma.io/ - style podobne do http://getbootstrap.com/. Przyjemne i łatwe.
+
+
+Przykłady animacji na stronie, stworzone na stronie https://jsbin.com/
 
 <!DOCTYPE html>
 <html>
@@ -67,6 +88,9 @@ albo
   transform: scale(30)
     
 }
+
+
+
 
 
 
