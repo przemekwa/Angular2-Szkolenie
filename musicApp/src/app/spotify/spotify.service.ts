@@ -18,6 +18,10 @@ export class SpotifyService {
 
     return this.http.get(this.apiUrl + query + '&offset=' + page * 20)
       .map(res => res.json().albums.items)
+      ._catch((err) => { 
+        console.log(err);
+        return Observable.throw(err); //obsługa błędów. BŁąd leci dalej wiec musi być coś zwrócone.
+      });
 
   }
 

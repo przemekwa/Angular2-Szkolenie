@@ -41,7 +41,7 @@ export class SpotifyComponent implements OnInit, AfterViewInit {
 
     //Zamiast zapisywac się na rządanie normalnie przez subscribe to można do szablony przekazć cały strumień
     //i odczytać w szablonie jako strumień używać pipow asynch
-    
+
     this.bookmarks$ = <EventEmitter<IItem[]>>this.bookmarksService.changed; 
     //
 
@@ -76,7 +76,7 @@ export class SpotifyComponent implements OnInit, AfterViewInit {
         console.log(this.isLoading);
         this.oldQuery = this.query;
 
-      });
+      }, err => console.warn(err)); // obsługa błędów po stronie komponentu
   }
 
   removeBookmarks(item: IItem) {
